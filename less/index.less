@@ -60,7 +60,7 @@ html, body {
 
 
 //Variables
-@main-color: red;
+@top-bottom: rgb(99, 41, 192);
 //Mixins
 .center(){
 	display: flex;
@@ -80,11 +80,12 @@ html, body {
 
 body {
 	font-size: 1.6rem;
+	width: 100%;
 }
 
 .navigation {
 	width: 100%;
-	background: rgb(99, 41, 192);
+	background: @top-bottom;
 	padding: 10px;
 
 	* {
@@ -102,15 +103,20 @@ body {
 			font-size: 2rem;
 			font-style: italic;
 		}
+		@media(max-width: 500px) {
+				text-align: center;
+				flex-direction: column;
+			}
+
+
 	}
 	
 	
-
 }
 
 .container {
 	width: 800px;
-	margin: 10px auto;
+	margin: 0 auto;
 
 	section {
 		justify-content: center;
@@ -133,10 +139,42 @@ body {
 			width: 100%;
 			text-align: center;
 			font-size: 2rem;
+			padding-bottom: 10px;
 		}
 		
 		div {
-			width: 45%;
+			.skill-card();
+			margin: 25px 10px;
+			@media (max-width: 500px) {
+				width: 100%;
+	
+				flex-direction: column;
+			}
+		}
+		
+	}
+	
+}
+
+.contact {
+	width: 100%;
+	background: @top-bottom;
+	padding: 10px;
+	display: flex;
+
+	address {
+		width: 100%;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+		h2 {
+			font-size: 2rem;
+			margin: 10px;
+		}
+		p {
+			margin: 5px;
+
 		}
 	}
+	
 }
