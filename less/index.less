@@ -60,7 +60,7 @@ html, body {
 
 
 //Variables
-@top-bottom: rgb(99, 41, 192);
+@top-bottom: rgb(123, 69, 211);
 //Mixins
 .center(){
 	display: flex;
@@ -81,6 +81,7 @@ html, body {
 body {
 	font-size: 1.6rem;
 	width: 100%;
+	background: @top-bottom;
 }
 
 .navigation {
@@ -107,23 +108,20 @@ body {
 				text-align: center;
 				flex-direction: column;
 			}
-
-
 	}
-	
 	
 }
 
 .container {
-	width: 800px;
+	max-width: 800px;
 	margin: 0 auto;
-
+	
 	section {
 		justify-content: center;
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		background: dodgerblue;
+		background: white;
 		h1 {
 			font-size: 2.5rem;
 			margin: 10px;
